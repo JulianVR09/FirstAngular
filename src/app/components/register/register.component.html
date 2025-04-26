@@ -1,0 +1,64 @@
+<div class="card">
+    <div class="card-header">
+      <h1>Register</h1>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="userData.username"
+            name="name"
+            id="name"
+            placeholder="Juan"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            [(ngModel)]="userData.email"
+            name="email"
+            id="email"
+            placeholder="example@mail.com"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            [(ngModel)]="userData.password"
+            name="password"
+            id="password"
+            placeholder="******"
+          />
+        </div>
+  
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            [(ngModel)]="userData.confirm_password"
+            name="confirmPassword"
+            id="confirmPassword"
+            placeholder="******"
+          />
+        </div>
+  
+        <button type="submit" class="btn btn-primary">
+          Register
+        </button>
+      </form>
+      <h6>
+        Already have an account? 
+        <a [routerLink]="['/login']">Go to login</a>
+      </h6>
+    </div>
+  </div>
